@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando DOm</title>
+    <style>
+       
+
+        body {
+            background-color: rgb(32, 149, 218);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Introdução ao DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+       /* document.write('Olá')
+        document.write(navigator.appName)
+        document.write(document.URL)*/
+
+        /*innerTexté uma propriedade que representa o conteúdo textual "renderizado" de um nó e seus descendentes.não pega a formatação
+        A propriedade Element.innerHTML define ou obtém a sintaxe HTML ou XML descrevendo os elementos descendentes.
+        pegando a sua formatação de seus filhos
+        */
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[1]
+        p1.style.color = 'blue '
+        document.write('Está escrito assim: ' + p1.innerText)
+       /* document.write('Está escrito assim: ' + p1.innerHTML)*/
+        corpo.style.background ='black'
+        var d = document.querySelector('#msg')
+        d.style.background = 'blue'
+
+        d.innerText ='estou aguardando...'
+    </script>
+</body>
+</html>
