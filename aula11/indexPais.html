@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAÍS</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Insira o país de onde você é: <input type="text" name="txt" id="txt">
+    <input type="button" value="Analisar" onclick="Analisar()">
+    <div id="res"></div>
+    <script>
+        function Analisar(){
+            let p = document.getElementById('txt')
+            let pais = p.value
+            let res = document.getElementById('res')
+            if ( pais == 'Brasil' || pais == 'brasil'){
+                res.innerHTML = `você é Brasileiro`
+            }else {
+                res.innerHTML = `Você é estrangeiro`
+            }
+        }
+        //aqui adicionei um evento para quando clicar em "Enter" acionar o botão
+        document.addEventListener("keypress", function(enter){
+            if (enter.key === "Enter"){
+                Analisar()
+            }
+        })
+
+
+        
+    </script>
+</body>
+</html>
